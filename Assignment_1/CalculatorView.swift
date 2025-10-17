@@ -33,7 +33,7 @@ struct CalculatorView: View {
                             .foregroundColor(.white)
                             .frame(maxWidth: .infinity)
                             .padding()
-                            .background(Color.blue)
+                            .background(Color(red: 245/255, green: 198/255, blue: 179/255))
                             .cornerRadius(12)
                     }
                     .padding(.horizontal, 40)
@@ -54,16 +54,22 @@ struct CalculatorView: View {
                         
                         NavigationLink(destination: AnimalDetailView(animal: animal)) {
                             Text("View Details")
-                                .font(.subheadline)
-                                .foregroundColor(.blue)
+                                .font(.headline)
+                                .foregroundColor(.white)
+                                .frame(maxWidth: .infinity)
+                                .padding(.vertical, 10)
+                                .background(Color(red: 245/255, green: 198/255, blue: 179/255))
+                                .cornerRadius(12)
+                                .padding(.horizontal, 80)
                         }
+
                     }
                     .transition(.scale.combined(with: .opacity))
                 }
                 
                 Spacer()
             }
-            .navigationTitle("Find Your Zodiac Animal")
+            .navigationTitle("Zodiac Calculator")
             .alert("Invalid Year", isPresented: $showError) {
                 Button("OK", role: .cancel) { }
             } message: {
