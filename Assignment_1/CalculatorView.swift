@@ -69,10 +69,6 @@ struct CalculatorView: View {
             } message: {
                 Text("Please enter a valid year (e.g., 2000)")
             }
-            .onDisappear {
-                yearInput = ""
-                resultAnimal = nil
-            }
         }
     }
     

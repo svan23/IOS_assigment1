@@ -10,6 +10,8 @@ import SwiftUI
 struct AboutView: View {
     var body: some View {
         Text("Student Name: Vanessa La, Student ID: A01335725")
+        Text("Student Name: Jaskunwar Hunjan, Student ID: A01195757")
+        Text("Student Name: Jeffery M Joseph, Student ID: A01357857")
     }
 }
 
