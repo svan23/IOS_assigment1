@@ -19,10 +19,10 @@ struct HomeView: View {
                     AnimalRow(animal: animal)
                 }
             }
-        }
             .listStyle(.insetGrouped)
             .navigationTitle("Zodiac Animals")
         }
+    }
     
 }
 

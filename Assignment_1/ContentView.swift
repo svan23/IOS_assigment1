@@ -9,12 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            TabView(selection: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Selection@*/.constant(1)/*@END_MENU_TOKEN@*/) {
-                HomeView()
-                CalculatorView()
-                AboutView()
-            }
+        TabView {
+            HomeView()
+                .tabItem {
+                    Label("Home", systemImage: "house.fill")
+                }
+                .tag(0)
+            
+            CalculatorView()
+                .tabItem {
+                    Label("Calculator", systemImage: "calendar")
+                }
+                .tag(1)
+            
+            AboutView()
+                .tabItem {
+                    Label("About", systemImage: "info.circle")
+                }
+                .tag(2)
         }
     }
 }
